@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+
+
+{% block app_content %}
+<section class="showcase">
+  <div class="jumbotron d-flex align-items-center min-vh-100" style="background-image: url('../static/img/background.jpg'); background-size: cover;" >
+  <div class="container text-center">
+    <h1 id="head_text" class="mb-3">Data Privacy </h1>
+    <h2 class="mb-3">Read Below</h2>
+    <!-- <button href="{{ url_for('symptoms')}}" class="btn btn-md btn-primary ml-4"><a href="{{ url_for('symptoms')}}">Check My Symptoms</a></button> -->
+  </div>
+</div>
+</section>
+
+<div class="d-flex align-items-center justify-content-center mt-5 mb-5">
+
+
+    <div class="row mb-5">
+        <div class="col-md-12" style="padding-left:7%; padding-right:7%">
+          <p>At Health AI we strive to make health services more accessible and affordable. In line with our passion to help out, we strongly emphasize the protection of our customer data and adhere to healthcare privacy rules and laws. </p>
+          <br/>
+          <p>This privacy policy document explains how we use, collect, disclose, and process personal data when a you as a user goes on the Health AI platform. </p>
+          <br/>
+          <p><a href="#WhoWeAre">1. Who We Are</a></p>
+          <p><a href="#Personal">2. Personal Information We Store & Our Retrieval Process</a></p>
+          <p><a href="#Usage">3. Health AI Usage of Personal Information</a></p>
+          <p><a href="#Holding">4. How Long Do We Hold Your Data</a></p>
+          <p><a href="#DataSecurity">5. Data Security</a></p>
+          <p><a href="#Rights">6. Your Rights</a></p>
+          <br/>
+          <br/>
+          <h2 id="WhoWeAre">1. Who we are</h2>
+          <br>
+          <p>Health AI is a company based in the USA. </p>
+          <p>Health AI provides information services and online healthcare assessment using machine learning and AI. </p>
+          <p>Although we provide assessment using our symptom questionairre pathway online, our assessment are not definitive and are not a substitute for a medical diagnosis from a professional physician</p>
+          <br>
+          <h2 id="Personal">2. Personal Information We Store & Our Retrieval Process</h2>
+          <br>
+          <h3>Personal Info</h3>
+          <p>When you register for a Health AI account, you complete forms and provide us with basic information about yourself, such as your name, date of birth, and email address. You also provide us your SSN</p>
+          <h3>Health and medical records</h3>
+          <p>The main type of information we hold about you is health and medical information: information about your health, symptoms, and test results.</p>
+          <h3>Technical information and analytics</h3>
+          <p>When you use Health AI we may automatically collect the following information where this is permitted by your device or browser settings:</p>
+
+          <p>(a) technical information, including the address used to connect your mobile phone or other device to the Internet, your login information, system and operating system platform type and version, device model, browser or app version, time zone setting, language and location preferences, wireless carrier and your location (based on IP address); and</p>
+
+          <p>(b) information about your visit (such as when you first used the website and when you last used it, and the total number of sessions you have had on that website), including products and services you viewed or used, App response times and updates, interaction information (such as button presses or the times and frequency of your interactions with the communications we deliver to you in the website or otherwise) </p>
+          <br>
+          <h2 id="Usage">3. Health AI Usage of Personal Information</h2>
+          <br>
+          <p>Health AI generally uses personal data with your consent, except where the use of personal data without consent is permitted by law.</p>
+          <h3>We Use Data to Help Provide a Service</h3>
+          <p>We mainly collect, use and retain medical information in order to provide an assessment (via the symptom questionairre). In order for our ai platform to output an accurate prediction for the health assessment, we need to obtain certain health information to complete an assessment. </p>
+          <h3>Improving the Health AI Platform</h3>
+          <p>We use data to build a better Health AI for all users. With more data we can improve our data models and deliver better healthcare. Data improves the performance of our artificial intelligence, which in turn will provide you and our users with a better service. When we use data to learn from, we always remove personal identifiers (such as your name, contact details and address) to ensure that your privacy is protected. This data (with your personal identifiers removed in the way described above) may include your medical record (both records received and created by us), and your interactions with our artificial intelligence services, such as our symptom checker and other digital tools. </p>
+          <h3>Additional Uses</h3>
+          <p>We may use data such as customer usage of Health AI services and products to better forecast demand, pinpoint high traffic areas on the website, and understand other customer usage trends.  </p>
+          <br>
+          <h2 id="Holding">4. How Long Do We Hold Your Data </h2>
+          <br>
+          <p>Health AI retains customer personal data and medical records for as long as necessary to provide the services a customer has requested and otherwise in accordance with legal, regulatory and self-regulatory requirements.</p>
+          <br>
+          <h2 id="DataSecurity">5. Data Security</h2>
+          <br>
+          <p>In accordance with HIPPA and other health regulations regarding patient health information securityin USA, user data on the Health AI platform is protected in the following ways:
+            <ul>
+              <li>Risk Analysis and Management</li>
+              <li>Administrative Safeguards (Security Management Process, Security Personnel, Information Access Management, Workforce Training and Management, Evaluation)</li>
+              <li>Physical Safeguards</li>
+              <li>Technical Safeguards</li>
+            </ul>
+          </p>
+          <br>
+          <h2 id="Rights">6. Your Rights</h2>
+          <br>
+          <p>Health AI relies on your consent to user your personal data. At any time, if you would like to withdraw consent, you may do so and we will comply immediately</p>
+          <p>In addition you may request the following: </p>
+          <ul>
+            <li>request access to your personal data </li>
+            <li>delete your personal data</li>
+            <li>Restrict processing of your personal data for our platform services and any other third party service</li>
+          </ul>
+    </div>
+</div>
+</div>
+
+
+{% endblock %}

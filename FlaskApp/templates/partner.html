@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+<!-- Jumbotron -->
+<section class="showcase">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <div class="col-lg-6 order-lg-1 text-white showcase-img" style="background-image: url('../static/img/partner.jpg');"></div>
+      <div class="col-lg-6 order-lg-2 my-auto showcase-text">
+        <h1 class="mb-3">Partners</h1>
+        <h2 class="mb-3">We Are Looking to Partner with Both the State & Local Government to improve Hospitals Across the Nation</h2>
+        <p>A technology solution like our healthcare AI website would greatly aid rural communities and allow individuals who are far away or too old to travel extensively to gain quick insight into their present condition and help them better understand whether a visit to the hospital is critical or not.</p>
+      </div>
+    </div>
+
+    <div class="row no-gutters mt-5">
+      <div class="col-lg-5 order-lg-2 text-white showcase-img" style="background-image: url('../static/img/contact.jpg');"></div>
+      <div class="col-lg-7 order-lg-1 my-auto showcase-text">
+        <section class="mb-4">
+
+          <!--Section heading-->
+          <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+          <!--Section description-->
+          <p class="text-center w-responsive mx-auto mb-5">Partner With Us Today</p>
+
+          <div class="row">
+
+              <!--Grid column-->
+              <div class="col-md-12 mb-md-0 mb-5">
+                  <form id="contact-form" name="contact-form" action="" method="POST">
+
+                      <!--Grid row-->
+                      <div class="row">
+
+                          <!--Grid column-->
+                          <div class="col-md-6">
+                              <div class="md-form mb-0">
+                                  <input type="text" id="name" name="name" class="form-control">
+                                  <label for="name" class="">Your name</label>
+                              </div>
+                          </div>
+                          <!--Grid column-->
+
+                          <!--Grid column-->
+                          <div class="col-md-6">
+                              <div class="md-form mb-0">
+                                  <input type="text" id="email" name="email" class="form-control">
+                                  <label for="email" class="">Your email</label>
+                              </div>
+                          </div>
+                          <!--Grid column-->
+
+                      </div>
+                      <!--Grid row-->
+
+                      <!--Grid row-->
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="md-form mb-0">
+                                  <input type="text" id="subject" name="subject" class="form-control">
+                                  <label for="subject" class="">Subject</label>
+                              </div>
+                          </div>
+                      </div>
+                      <!--Grid row-->
+
+                      <!--Grid row-->
+                      <div class="row">
+
+                          <!--Grid column-->
+                          <div class="col-md-12">
+
+                              <div class="md-form">
+                                  <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                  <label for="message">Your message</label>
+                              </div>
+
+                          </div>
+                      </div>
+                      <!--Grid row-->
+
+                  </form>
+
+                  <div class="text-center text-md-left">
+                      <a class="btn btn-primary" onclick="">Send</a>
+                  </div>
+                  <div class="status"></div>
+              </div>
+
+          </div>
+
+      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

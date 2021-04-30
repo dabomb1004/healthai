@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    {% if current_user.is_anonymous %}
+    <section class="showcase">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+
+          <div class="col-lg-6 order-lg-1 text-white showcase-img" style="background-image: url('../static/img/banner-pic.jpg');"></div>
+          <div class="col-lg-6 order-lg-2 my-auto showcase-text">
+            <h1 class="mb-3">AI for Your Health.</h1>
+            <h2 class="mb-3">Get an Online Health Assessment Today.</h2>
+            <p><b>disclaimer:</b> Health AI only provides preliminary assessments. For an official diagnosis see your doctor.</p>
+            <a href="{{ url_for('register')}}"><button href="#" class="btn btn-md btn-primary">Join Today</button></a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Icons Grid -->
+    <section class="features-icons bg-light text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="features-icons-item mx-auto mb-2 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex mb-5">
+                <img class="mx-auto d-block" src="../static/img/assess.png"/>
+              </div>
+              <h3>1. Complete the Online Assessment</h3>
+              <p class="lead mb-0 text-justify">Health AI symptom assessment is a quick and easy process. Users answer a series of questions based on the disease they want to check for.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="features-icons-item mx-auto mb-2 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex mb-5">
+                <img class="mx-auto d-block" src="../static/img/report.png"/>
+              </div>
+              <h3>2. Get Results</h3>
+              <p class="lead mb-0 text-justify">Once a user completes the assessment flow, the user will recieve a report that reveals whether they seem to have the disease or not.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% else %}
+
+        <!-- Jumbotron -->
+        <section class="showcase">
+          <div class="jumbotron d-flex align-items-center min-vh-100" style="background-image: url('../static/img/background.jpg'); background-size: cover;" >
+          <div class="container text-center">
+            <h1 id="head_text" class="mb-3">Hello {{ current_user.first_name }}, How Are You Feeling Today? </h1>
+            <h2 class="mb-3">If You Wish to Have a Health Assessment, Please Click Below</h2>
+            <button href="{{ url_for('symptoms')}}" class="btn btn-md btn-primary ml-4"><a href="{{ url_for('assessment')}}">Check My Symptoms</a></button>
+          </div>
+        </div>
+
+
+
+          <section class="features-icons bg-light text-center">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="features-icons-item mx-auto mb-2 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex mb-5">
+                      <img class="mx-auto d-block" src="../static/img/search.png"/>
+                    </div>
+                    <h3><a href="{{ url_for('library')}}">Search & Learn More About My Symptoms</a></h3>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="features-icons-item mx-auto mb-2 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex mb-5">
+                      <img class="mx-auto d-block" src="../static/img/report.png"/>
+                    </div>
+                    <h3><a href="{{ url_for('user', username=current_user.username) }}">My Assessments</a></h3>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="features-icons-item mx-auto mb-2 mb-lg-0 mb-lg-3">
+                    <div class="features-icons-icon d-flex mb-5">
+                      <img class="mx-auto d-block" src="../static/img/heart-problem.png"/>
+                    </div>
+                  <h3>  <a href="{{ url_for('assessment') }}">Take An Assessment</a></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+    {% endif %}
+{% endblock %}

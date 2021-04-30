@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+
+
+{% block app_content %}
+<section class="showcase">
+  <div class="jumbotron d-flex align-items-center min-vh-100" style="background-image: url('../static/img/background.jpg'); background-size: cover;" >
+  <div class="container text-center">
+    <h1 id="head_text" class="mb-3">Terms & Conditions </h1>
+    <p><span style="font-weight: 400;">Effective date:&nbsp; April 2021.</span></p>
+    <!-- <button href="{{ url_for('symptoms')}}" class="btn btn-md btn-primary ml-4"><a href="{{ url_for('symptoms')}}">Check My Symptoms</a></button> -->
+  </div>
+</div>
+</section>
+
+<div class="d-flex align-items-center justify-content-center mt-5 mb-5">
+
+
+    <div class="row mb-5">
+        <div class="col-md-12" style="padding-left:7%; padding-right:7%">
+          <br/>
+          <p><a href="#Welcome">1. Welcome to Health AI Application</a></p>
+          <p><a href="#Legal">2. The legal relationship between you and Health AI</a></p>
+          <p><a href="#Info">3. Information we collect about you</a></p>
+          <p><a href="#Platform">4. The Health AI Platform</a></p>
+          <p><a href="#useraccount">5. Creating a User account</a></p>
+          <p><a href="#Rights">6. Your right to use the Health AI Platform</a></p>
+          <p><a href="#Info">7. Your use of the Health AI Platform</a></p>
+          <p><a href="#Termination">8. Termination of our contractual relationship</a></p>
+          <p><a href="#Promise">9. Our promise to you</a></p>
+          <p><a href="#Third">10. Third-party services</a></p>
+          <p><a href="#Updates">11. Health AI Platform updates</a></p>
+          <p><a href="#Changes">12. Changes to these Terms and Conditions</a></p>
+          <p><a href="#Contractual">13. Documents governing the contractual relationship between you and us</a></p>
+          <p><a href="#Legislation">14. Applicable legislation and jurisdiction</a></p>
+          <p><a href="#Misc">15. Miscellaneous</a></p>
+          <p><a href="#Contact">15. Your right to use the Health AI Platform</a></p>
+
+          <br/>
+          <br/>
+          <ol>
+          <li id="Welcome"><strong> Welcome to Health AI Application</strong></li>
+          </ol>
+
+          <p ><span style="font-weight: 400;">1.1. Welcome to&nbsp;Health AI. These terms and conditions (&ldquo;terms&rdquo;) are a binding contract between Health AI Technologies (&ldquo;Health AI&rdquo;, &ldquo;Health AI Platform&rdquo;, &ldquo;Health Artificial Intelligence Application&rdquo;, &ldquo;us&rdquo;, or &ldquo;we&rdquo;), and you (hereinafter referred to as&nbsp;</span><strong>&ldquo;You&rdquo;</strong><span style="font-weight: 400;">,&nbsp;</span><strong>&ldquo;Your&rdquo;&nbsp;</strong><span style="font-weight: 400;">or&nbsp;</span><strong>&ldquo;User</strong><span style="font-weight: 400;">). These are the terms and conditions of Health AI Platform on which we supply content, products, software and services through our website, 107.23.25.147/index (&ldquo;healthai.com&rdquo;) to provide users with the best preliminary diagnosis and connect you with medical professionals. The Website and such content, products, services, software and the Apps are collectively referred to herein as the &ldquo;Services&rdquo; and/or &ldquo;Health AI Platform&rdquo;). You must read and agree to these terms and Health AI&rsquo;s Privacy Policy before using the services. By using the services, you agree to be bound and abide by these terms, the privacy policy, and all applicable laws, rules and regulations. If you do not agree to these terms, you may not use the services.</span></p>
+          <p><span style="font-weight: 400;">1.2. The Health AI Application is available as a web-based application (hereinafter called the&nbsp;</span><strong>&ldquo;Website&rdquo;</strong><span style="font-weight: 400;">), powered by artificial intelligence algorithms that generates preliminary assessments from the symptoms you enter. Health AI has also developed a patient portal (hereinafter referred to as the&nbsp;</span><strong>&ldquo;Patient Portal&rdquo;</strong><span style="font-weight: 400;">) a robust database system and a symptom checker (also called the&nbsp;</span><strong>&ldquo;Symptom Assessment&rdquo;</strong><span style="font-weight: 400;">), a tool where you can enter symptoms and get general information on possible next steps. For some symptoms, you will also be provided with a list of possible matching conditions which are often associated with the symptoms you entered. The website, mobile app, the Health AI algorithm and the Patient Portal, including any software, services or other technology are hereinafter called the&nbsp;</span><strong>&ldquo;Health AI Platform&rdquo;</strong><span style="font-weight: 400;">.</span></p>
+          <p><span style="font-weight: 400;">PLEASE NOTE THAT THE HEALTH AI PLATFORM PROVIDES PRELIMINARY ASSESMENT ONLY. PLEASE SEEK PROFESSIONAL MEDICAL HELP FOR OFFICIAL DIAGNOSIS. IN CASE OF AN EMERGENCY, YOU SHOULD CONTACT THE EMERGENCY SERVICES IMMEDIATELY. ALWAYS CONSULT YOUR DOCTOR OR ANOTHER QUALIFIED HEALTH CARE PROVIDER IF YOU HAVE ANY QUESTIONS REGARDING ANY MEDICAL ISSUES. YOU SHOULD NEVER DISREGARD A DOCTOR&rsquo;S PROFESSIONAL ADVICE OR CANCEL AN APPOINTMENT WITH A DOCTOR BECAUSE YOU ARE RELYING ON INFORMATION YOU HAVE READ OR HEARD IN THE HEALTH AI PLATFORM.</span></p>
+          <p><span style="font-weight: 400;">1.3. The Health AI Platform is self-operating company.</span></p>
+          <p><span style="font-weight: 400;">1.4. Contacting Health AI.</span></p>
+          <p>&nbsp;</p>
+          <p><span style="font-weight: 400;">Email us at support@healthai.com</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Call us on +1 555 5687 008</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Chat with our support team online</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Or write to us at</span><strong>: Health AI</strong><span style="font-weight: 400;">, 2201 G St NW, Washington, DC 20052</span></p>
+          <p><span style="font-weight: 400;">We will contact you in English through the app, or using your email or by phone. We might also send you notifications in the app when we need to tell you something important.</span></p>
+          <p><span style="font-weight: 400;">1.5. You must be at least 16 years old if you wish to use the Health AI Platform. If you are under 18 years old, usage of the Health AI Platform and your agreement to these Terms and Conditions require the consent of your legal guardian.</span></p>
+          <p><span style="font-weight: 400;">1.6. Your use of the full functionality of the Health AI Platform requires your agreement to be bound by these Terms and Conditions. If you do not agree to these Terms and Conditions, you may not use or access any part of the Health AI Platform.</span></p>
+          <p><span style="font-weight: 400;">1.7. Contract language is English.</span></p>
+          <ol start="2">
+          <li id="Legal"><strong> The legal relationship between you and Health AI</strong></li>
+          </ol>
+          <p><span style="font-weight: 400;">2.1. These Terms and Conditions apply to the use of the Health AI Platform and contain the terms governing your use of the Health AI Platform. It is important that you have read and understood the present Terms and Conditions in conjunction with our&nbsp;</span><span style="font-weight: 400;">Privacy Policy</span><span style="font-weight: 400;">&nbsp;before using the Health AI Platform. If you have difficulty understanding any aspect of these documents, please contact us at </span><span style="font-weight: 400;">support@healthai.com</span> <span style="font-weight: 400;">and we can explain what it means for you.</span></p>
+          <p><span style="font-weight: 400;">2.2. You may only set up a User account on the Health AI Platform if you agree to these Terms and Conditions. If you do not agree to these Terms and Conditions, you may not create a User account on the Health AI Platform.</span></p>
+          <ol start="3">
+          <li id="Info"><strong> Information we collect about you</strong></li>
+          </ol>
+          <p><span style="font-weight: 400;">3.1. Protecting your privacy and any data relating to you (hereinafter referred to as&nbsp;</span><strong>&ldquo;Personal Data&rdquo;</strong><span style="font-weight: 400;">) is immensely important to us. For that reason, any of your Personal Data generated by the use of the Health AI Platform will only be collected, stored and processed by us in compliance with the General Data Protection Regulation 2016/679 of April 27th, 2016 (</span><strong>&ldquo;GDPR&rdquo;</strong><span style="font-weight: 400;">). Please read our&nbsp;</span><span style="font-weight: 400;">Privacy Policy</span><span style="font-weight: 400;">&nbsp;to understand how, and for what purposes, we collect and use your information to provide you with the best possible service.</span></p>
+          <p><span style="font-weight: 400;">3.2. You hereby grant us the perpetual, worldwide, transferable, and sublicensable right to use data, which we have anonymized in line with applicable data protection law, in any manner, whether currently known or unknown. You acknowledge and accept that we own all right, title and interest in and to any data derived by us from such anonymized data.</span></p>
+          <ol start="4">
+          <li id="Platform"><strong> The Health AI Platform</strong></li>
+          </ol>
+          <p><span style="font-weight: 400;">4.1. The Health AI Platform offers you the opportunity to find out what might potentially be causing your health issues. The Health AI Platform uses a medical knowledge base to suggest possible causes for your symptoms (hereinafter referred to as the&nbsp;</span><strong>&ldquo;Assessment Report&rdquo;</strong><span style="font-weight: 400;">).</span></p>
+          <p><span style="font-weight: 400;">4.2. The Health AI Platform is provided to you free of charge, and you are allowed to run an unlimited number of symptom assessments and Assessment Reports.</span></p>
+          <p><span style="font-weight: 400;">4.3. Please be aware that we provide the Health AI Platform solely for information purposes. It is not a medical consultation. The Health AI Platform is not a suitable substitute for medical advice obtained from your doctor, general practitioner or other health service provider.</span></p>
+          <p><span style="font-weight: 400;">4.4. The Health AI Platform does NOT provide diagnoses for medical conditions, nor does it prescribe how you are to treat any medical issues you may have. This can only be done by consulting a medical professional (such as a general practitioner).</span></p>
+          <p><span style="font-weight: 400;">4.5. Ultimately, if you do have any medical issues related to the information that you entered into the Health AI Platform, you are responsible for whether or not you decide to consult a medical professional and/or seek medical advice.</span></p>
+          <ol start="5">
+          <li id="useraccount"><strong> Creating a User account</strong></li>
+          </ol>
+          <p><span style="font-weight: 400;">5.1. Before using the Health AI App, you will first need an account. You can then download the Health AI App from the Apple App Store or Google Play Store (hereinafter referred to, either individually or collectively, as&nbsp;</span><strong>&ldquo;App Store&rdquo;</strong><span style="font-weight: 400;">) to your mobile device or tablet. You may also be able to access the Health AI Platform directly via the web- based application or via an application, through us directly or through one of our partners.</span></p>
+          <p><span style="font-weight: 400;">5.2. After downloading the Health AI App (or accessing the web-based application on our Website) you can register with the Health AI Platform by setting up a User account with a username and password (hereinafter referred to as&nbsp;</span><strong>&ldquo;User Account&rdquo;</strong><span style="font-weight: 400;">). Registration constitutes a binding offer of the User to be bound by these Terms and Conditions. We may (but are not obliged to) accept this offer by enabling access to the Health AI Platform for the first time via the User Account. We will send you confirmation of registration electronically. By using, accessing or otherwise utilizing the Health AI Platform EVEN IF YOU DO NOT SET UP A USER ACCOUNT, you accept, acknowledge and avail yourself to these Terms and Conditions.</span></p>
+          <p><span style="font-weight: 400;">5.3. We will save the contractual text of the agreed Terms and Conditions. Beyond this, we do not assume any obligation with regard to the availability of the agreed terms to the User.</span></p>
+          <p><span style="font-weight: 400;">5.4. We advise our Users to only use &lsquo;strong&rsquo; passwords for their User Account (strong passwords are passwords consisting of a combination of numbers, both upper and lower case letters, and symbols). When you register your User Account or provide us with other information, you are also declaring that the information provided to us is correct and complete. In the event of any change in the information later on, you declare that you will promptly notify us of such changes by updating the information.</span></p>
+          <p><span style="font-weight: 400;">5.5. It may be possible to login to the Health AI Platform via an account you hold with a third-party service provider (such as Facebook). If you connect to the Health AI Platform through such a third-party service provider, you also grant us access to the use of certain information you have provided to that service provider (e.g. name, date of birth, email address, phone number), if and to the extent permitted by that service provider&rsquo;s terms and conditions and our&nbsp;</span><span style="font-weight: 400;">Privacy Policy</span><span style="font-weight: 400;">.</span></p>
+          <p><span style="font-weight: 400;">5.6. You are responsible for maintaining the confidentiality of your login information and any activity in your User Account. Should you have the suspicion that your User Account may have been misused, you agree to inform us of this immediately by emailing&nbsp;</span><a href="mailto:legal@ada.com"><span style="font-weight: 400;">support@healthai.com</span></a><span style="font-weight: 400;">.</span></p>
+          <ol start="6">
+          <li id="Rights"><strong> Your right to use the Health AI Platform</strong></li>
+          </ol>
+          <p><span style="font-weight: 400;">6.1. The Health AI Platform and all materials and content contained therein are our property or the property of the persons who have granted us the applicable license (this also applies to the third-party software listed in the Health AI App). We grant you the right to use these materials and content, but only for the purposes of using the Health AI Platform, for you personally or on behalf of another person always in accordance to these Terms and Conditions. If you use the Health AI Platform for another person, you remain fully responsible for ensuring that the use on behalf of that person is permitted under privacy and other applicable legal requirements. In particular, you are obliged to collect applicable consent from that person and inform them about our Terms and Conditions and&nbsp;</span><span style="font-weight: 400;">Privacy Policy</span><span style="font-weight: 400;">.</span></p>
+          <p><span style="font-weight: 400;">6.2. We grant you the right to personally access and use the Health AI Platform. You are prohibited from transferring this right to anyone else, or to sell, give away or transfer your User Account to anyone else. Your right to access the Health AI Platform does not preclude us granting other persons the right to access the Health AI Platform.</span></p>
+          <p><span style="font-weight: 400;">6.3. Your right to use the name &ldquo;Health AI&rdquo; or any trademarks, logos, domain names or other characteristic trademarks whatsoever is limited to the scope defined in these Terms and Conditions.</span></p>
+          <p><span style="font-weight: 400;">6.4. In return for your warranty to comply with these Terms and Conditions, we grant you a limited, non-transferable, non-sublicensable, personalized, non-exclusive, revocable right to download the Health AI App to your device or to access the Website or the Health AI symptom assessment Tool under the conditions set forth in these Terms and Conditions or the privacy policy, or under any terms applying to the App Store you may have downloaded the Health AI App from.</span></p>
+          <p><span style="font-weight: 400;">6.5. As the User, unless such behaviors are appropriately permitted in accordance with these Terms and Conditions or unless permitted under mandatory copyright law where necessary for the use of the Health AI Platform in accordance with its intended purpose and/or indispensable to obtain the information necessary to achieve the interoperability with other programs, you undertake to refrain from the following:&nbsp;</span></p>
+          <p><span style="font-weight: 400;">6.6. You are aware that we, and/or the persons who have granted us a license in this respect, are entitled to any confidential information, rights of use, of exploitation and of recovery &ndash; and any other intellectual property rights fully or partially existing &ndash; regarding the Health AI Platform.</span></p>
+          <p><span style="font-weight: 400;">6.7. Feedback/surveys. If you provide feedback, ideas or suggestions, or if you reply to surveys in connection with our Services (hereinafter referred as the &ldquo;Feedback&rdquo;), you acknowledge that the Feedback is not confidential and that you grant us a worldwide, non-exclusive, irrevocable, perpetual, royalty free and unlimited license to use your Feedback in any way, for any purpose, and through any medium or technology now known or unknown, whether in whole or in part, and whether as modified or unmodified. We will always use your Feedback in compliance with those Terms and Conditions, our Privacy Policy and any other applicable laws.</span></p>
+          <ol start="7">
+          <li id="Platform"><strong> Your use of the Health AI Platform</strong></li>
+          </ol>
+          <p><span style="font-weight: 400;">7.1. In addition to the other provisions in these Terms and Conditions, this section defines certain regulations relating to the use of the Health AI Platform (hereinafter referred to as&nbsp;</span><strong>&ldquo;Regulations&rdquo;</strong><span style="font-weight: 400;">).</span></p>
+          <p><span style="font-weight: 400;">7.2. The following is a list of activities that are prohibited in the context of using the Health AI Platform. You are prohibited to:</span></p>
+          <p><span style="font-weight: 400;">7.3. The non-compliance with the Regulations listed in paragraph 7.2 represents a material breach of these Terms and Conditions, and may result in us, at our sole discretion, initiating the following measures &ndash; either individually or in combination:</span></p>
+          <p><span style="font-weight: 400;">7.4. The reaction to a breach of agreement committed by you is not limited to the actions described in the preceding paragraph 7.3, i.e. we are entitled to take any further action in accordance with these Terms and Conditions and/or statutory law.</span></p>
+          <ol start="8">
+          <li id="Termination"><strong> Termination of our contractual relationship</strong></li>
+          </ol>
+          <p><span style="font-weight: 400;">8.1. In the event that you feel that you can no longer agree to the present Terms and Conditions or the Privacy Policy, at any time, you agree to stop using the Health AI Platform immediately.</span></p>
+          <p><span style="font-weight: 400;">8.2. You are entitled to stop using the Health AI Platform at any time and to terminate your agreement with Health AI, including if you do not agree with the changes to the Health AI Application or these Terms and Conditions we proposed. Please follow the instructions on the Health AI Platform to deactivate your User Account. If you access the Health AI Platform via the Health AI App, you can delete your User Account via the settings menu.</span></p>
+          <p><span style="font-weight: 400;">8.3. If we choose to terminate your agreement with us we will provide you with two weeks&lsquo; notice.&nbsp;</span></p>
+          <p><span style="font-weight: 400;">8.4. Either party&rsquo;s right to terminate the agreement for cause remains unaffected. Cause that entitles us to terminate the agreement may be, in particular but not exclusively, your violation of the material contractual provisions (in particular paragraph&nbsp;7.2) and if, due to external circumstances, it can be assumed that you are making improper use of our services. If good reason exists, we are furthermore authorized to block your access to the Health AI Platform, without any notice, and provided that no other less severe measure is effective.&nbsp;</span></p>
+          <p><span style="font-weight: 400;">8.5. If you or we deactivate your User Account as described in this paragraph or withdraw your right to access the Health AI Platform, we will delete any Personal Data stored about you in accordance with our Privacy Policy (and as stipulated in the applicable statutory provisions), provided that our rights to use such data in anonymized form pursuant to section&nbsp;3.2 remains unaffected. You also lose the right previously granted to you to access the Health AI Platform.</span></p>
+          <ol start="9">
+          <li id="Promise"><strong> Our promise to you</strong></li>
+          </ol>
+          <p><span style="font-weight: 400;">9.1. Any information on the symptoms stated by you that is made available to you in text form via the Health AI Application is for information purposes only. The information is made available by Health AI as is, without warranty, guarantee or representation of any kind.</span></p>
+          <p><span style="font-weight: 400;">9.2. You should not take any action based on the information provided in the Health AI Platform without consulting a doctor or other medical professional first.</span></p>
+          <p><span style="font-weight: 400;">9.3. Due to the nature of the internet and the given technology, we are unable to promise that you will be able to use the Health AI Platform at all times without any interruption and without delay or faults, and that the Health AI Platform will at all times meet your expectations. We can therefore assume no obligation with respect to the performance or availability of the Health AI Platform in these present Terms and Conditions. We expressly exclude any strict liability that may be applied by enforcement of law due to defects of the Health AI Platform existing at the time the agreement on the use of the Health AI Platform between you and us was concluded.</span></p>
+          <p><span style="font-weight: 400;">9.4. Should you incur any damage through the use of the Health AI Platform, we may only be held liable for intent and gross negligence. We may furthermore be held liable for the negligent breach of material contractual obligations, which must be met in order for this agreement to even be properly executed, and the violation of which will jeopardize the purpose of the agreement and which you, the User, should in regular cases be able to trust will be fulfilled. In the latter case, we may however only be held liable for calculable damages. We may not be held liable for violation by simple negligence of any obligations other than those specified in the preceding sentences. The foregoing exclusions of liability do not apply to violations causing death or personal injury and any liability under the U.S. Product Liability Law.</span></p>
+          <ol start="10">
+          <li id="Third"><strong> Third-party services</strong></li>
+          </ol>
+          <p><span style="font-weight: 400;">10.1. If, and to the extent that, our Health AI Platform contains links to other websites or resources operated by third parties, these links are to be deemed as being provided for your information only.</span></p>
+          <p><span style="font-weight: 400;">10.2. We are unable to influence the content of such websites or resources provided by third parties, and we may not be held liable for the content of information or websites linked included in frames. We may not be held liable for any financial or physical damages that you may incur as a result of, or in connection with, the use of such websites or resources.</span></p>
+          <p><span style="font-weight: 400;">10.3. You understand that the availability of the Health AI App is dependent on the third-party where you downloaded the Health AI App (the App Store). You are aware that these Terms and Conditions apply to the contractual relationship between you and Health AI, not to your contractual relationship with the App Store.</span></p>
+          <ol start="11">
+          <li id="Updates"><strong> Health AI Platform updates</strong></li>
+          </ol>
+          <p><span style="font-weight: 400;">11.1. We are constantly updating and improving the Health AI Platform. We constantly strive to provide you with innovative new services and features. We also make improvements and updates in order to stay abreast of changing technologies, behaviors and the way in which people use the internet.</span></p>
+          <p><span style="font-weight: 400;">11.2. We reserve the right to change a specific aspect of a specific feature by updating the Health AI Platform, resetting that feature and suspending the service or support for that feature. These changes may affect your activities on the Health AI Application. Changes may include the removal, modification or reset of the features you use. We will inform you of the changes and your rights in the case of changes by separate notification, to the extent you have signed up for such notifications (see paragraph 12.3.).</span></p>
+          <p><span style="font-weight: 400;">11.3. Updates may be released from time to time by us or via the App Store where you downloaded the Health AI App. From time to time, to be able to use the Health AI Platform, it may be necessary for you to update third-party software.</span></p>
+          <ol start="12">
+          <li id="Changes"><strong> Changes to these Terms and Conditions</strong></li>
+          </ol>
+          <p><span style="font-weight: 400;">12.1. We have the right to amend, Health AI or supplement the present Terms and Conditions from time to time. The current version of the Terms and Conditions can be found on our website (</span><a href="http://107.23.25.147/privacy"><span style="font-weight: 400;">HealthAI.com</span></a><span style="font-weight: 400;">/terms</span><span style="font-weight: 400;">).</span></p>
+          <p><span style="font-weight: 400;">12.2. Any changes to these Terms and Conditions will usually be the result of new features being added to the Health AI Platform, or of changes in the legislation or applicable Regulations.</span></p>
+          <p><span style="font-weight: 400;">12.3. We will contact you to notify you of any changes or additions to these Terms and Conditions at least 30 calendar days before any changes or additions to these Terms and Conditions take effect. If you do not object within 30 days of receipt of notice, such changes and additions will be regarded as effective and agreed upon from the deadline onward. We will inform you of your right of objection and the consequences of the objection in our notice of changes to the Terms and Conditions. If, in the event of your objection to the amendment within the agreed timeframe, it is legally, economically or technically unreasonable for us to continue the provision of the Health AI Platform, we are entitled to terminate the agreement no earlier than the effective date of the amendment set forth in the notification. Any other right of termination remains unaffected.</span></p>
+          <ol start="13">
+          <li id="Contractual"><strong> Documents governing the contractual relationship between you and us</strong></li>
+          </ol>
+          <p><span style="font-weight: 400;">The current version of the Terms and Conditions includes all provisions governing the contractual relationship between you and us. Older versions of the Terms and Conditions no longer apply to our contractual relationship and are entirely replaced by the current version.</span></p>
+          <ol start="14">
+          <li id="Legislation"><strong> Applicable legislation and jurisdiction</strong></li>
+          </ol>
+          <p><span style="font-weight: 400;">14.1. The agreement concluded on the basis of these Terms and Conditions is subject to the laws of the United States of America. Without prejudice to the above choice of jurisdiction, in the case of agreements between traders and consumers, the provisions of the law of the country in which the consumer is habitually resident and which &ndash; under the law of that country &ndash; may not be derogated from, may be applied in favor of the consumer if the trader:</span></p>
+          <p><span style="font-weight: 400;">and the agreement falls within the scope of such activities.</span></p>
+          <p><span style="font-weight: 400;">14.2. The courts of the United States have the exclusive jurisdiction to settle any disputes arising in connection with, or as a result of, your use of the Health AI Platform.</span></p>
+          <ol start="15">
+          <li id="Misc"><strong> Miscellaneous</strong></li>
+          </ol>
+          <p><span style="font-weight: 400;">15.1. You consent to us communicating with you by electronic means (such as by email or other form of text).</span></p>
+          <p><span style="font-weight: 400;">15.2. We may send you notices electronically to the email address you provided at the time you signed up for the Health AI Platform, or via other electronic means on the Health AI Platform when available.</span></p>
+          <p><span style="font-weight: 400;">15.3. The failure to enforce our rights must not be construed as a waiver of such rights.</span></p>
+          <p><span style="font-weight: 400;">15.4. Should any provision in these Terms and Conditions be or become void or unenforceable, the effectiveness of the remaining provisions will remain unaffected.</span></p>
+          <p><span style="font-weight: 400;">15.5. Only the contracting party itself has the right to enforce contractual provisions.</span></p>
+          <ol start="16">
+          <li id="Contact"><strong> Contact</strong></li>
+          </ol>
+          <p><span style="font-weight: 400;">If you would like to contact us in regard to the present Terms and Conditions or any other document mentioned in them, please email us at&nbsp;</span><a href="mailto:support@healthai.com"><span style="font-weight: 400;">support@healthai.com</span></a><span style="font-weight: 400;">.</span></p>
+          <p>&nbsp;</p>
+    </div>
+</div>
+</div>
+
+
+{% endblock %}

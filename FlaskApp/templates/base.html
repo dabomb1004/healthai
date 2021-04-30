@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="Health AI uses data analysis techniques and machine learning to predict the likelihood of 10 diseases for patients online. It is not a system for diagnosis but offers help in preliminary assessment of patient conditions and symptoms" content="">
+  <meta name="health_ai_team" content="">
+
+  <title>Landing Page - Start Bootstrap Theme</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <!-- Bootstrap core JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" charset="utf-8"></script>
+  <!-- Custom styles for this template -->
+  <link href="../static/css/landing-page.min.css" rel="stylesheet">
+  <link href="../static/css/landing-page.css" rel="stylesheet">
+  <link href="../static/css/register.css" rel="stylesheet">
+  <link rel='icon' href='../static/img/favicon.ico' type='image/x-icon' sizes="16x16" />
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/offcanvas/">
+    <!-- Custom styles for this template -->
+  <link href="offcanvas.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style>
+  .help-block {
+    color:red;
+    }
+    html,body
+    {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+  #submit {
+    margin-top: 20px;
+  }
+
+  #register_button {
+    display: none;
+  }
+
+  table {
+  width:500px;
+  table-layout:fixed;
+  }
+
+  </style>
+
+  {% if current_user.is_authenticated %}
+  <style media="screen">
+
+  #head_text{
+    color: #3a3a3a;
+  }
+
+  a {
+    color: #636363;
+    text-decoration: none;
+  }
+  </style>
+  {% endif %}
+
+
+</head>
+
+<body>
+
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{url_for('index')}}">Health AI</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse topnav-right" id="navbarSupportedContent">
+      <ul class="navbar-nav navbar-right me-auto mb-2 mb-lg-0 ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{{ url_for('index')}}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('about')}}">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('partner')}}">Partner</a>
+        </li>
+
+        {% if current_user.is_anonymous %}
+       <li class="nav-item"> <a class="nav-link" href="{{ url_for('login') }}">Login</a></li>
+       {% else %}
+       <li class="nav-item"><a class="nav-link" href="{{ url_for('user', username=current_user.username) }}">Profile</a></li>
+       <li class="nav-item"><a class="nav-link" href="{{ url_for('library')}}">Library</a></li>
+       <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Logout</a></li>
+       {% endif %}
+
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+  <div class="container">
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-info mt-4" role="alert" style="">{{ message }}</div>
+          {% endfor %}
+      {% endif %}
+      {% endwith %}
+
+  </div>
+
+        {% block app_content %}{% endblock %}
+
+
+    <footer class="footer bg-light">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-4 h-100 text-center text-lg-left my-auto">
+              <img src="../static/img/hai.png" alt="logo pic">
+              <h3>Health AI </h3>
+              <p class="text-muted small mb-4 mb-lg-0">&copy; Health AI 2020. All Rights Reserved.</p>
+            </div>
+          <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+            <ul class="list-inline mb-2">
+              <li class="list-inline-item">
+                <a href="{{ url_for('about') }}">About</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="{{ url_for('partner') }}">Contact</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="{{url_for('terms') }}">Terms of Use</a>
+              </li>
+              <li class="list-inline-item">&sdot;</li>
+              <li class="list-inline-item">
+                <a href="{{ url_for('privacy') }}">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fab fa-facebook fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item mr-3">
+                <a href="#">
+                  <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-instagram fa-2x fa-fw"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    {% block js %}{% endblock %}
+</body>
+</html>

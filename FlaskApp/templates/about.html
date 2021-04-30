@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+<!-- Jumbotron -->
+<section class="showcase">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+
+      <div class="col-lg-6 order-lg-1 text-white showcase-img" style="background-image: url('../static/img/rural.jpg');"></div>
+      <div class="col-lg-6 order-lg-2 my-auto showcase-text">
+        <h1 class="mb-3">Our Story</h1>
+        <h2 class="mb-3">Giving Greater Access to Rural & Low-income Communities</h2>
+        <p>The main purpose of the Health Ai is building a system that makes preliminary health asessments easier for people who can’t afford to go to a hospital very easily. We built Health AI to essentially help people to take next best actions. Of course we don't replace an actual diagnosis for the doctor but we bring a simple but effective tool to rural and low-income individuals to have a basic estimate of their condition and whether visiting a doctor is urgent. </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Image Showcases -->
+<section class="showcase">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <div class="col-lg-4 order-lg-2 text-white showcase-img" style="background-image: url('../static/img/help.jpg');"></div>
+      <div class="col-lg-8 order-lg-1 my-auto showcase-text">
+        <h2>According to the US Census Bureau, in 2019, 8.0 percent of people, or 26.1 million, did not have health insurance at any point during the year.</h2>
+        <p class="lead mb-0">Although we see the number of people uninsured decreasing in the U.S. over the years, a good number of the remaining 92 percent cannot afford insurance plans with broader coverage. We believe Health AI may help uninsured people who cannot access healthcare facilities as frequently as insured people gain insights into their existing health conditions.
+          </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- {% for post in posts %}
+    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+    {% endfor %} -->
+{% endblock %}

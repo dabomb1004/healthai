@@ -1,0 +1,243 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+<table class="table table-hover">
+       <tr>
+           <td width="256px"><img src="{{ user.avatar(256) }}"></td>
+           <td>
+               <h1>{{ user.first_name }} {{ user.last_name }}</h1>
+               {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
+               {% if user.last_seen %}<p>Last seen on: {{ user.last_seen }}</p>{% endif %}
+               {% if user == current_user %}
+               <p><a href="{{ url_for('edit_profile') }}">Edit your profile</a></p>
+               {% endif %}
+           </td>
+       </tr>
+   </table>
+
+   <div class="d-flex align-items-center justify-content-center mt-5 mb-5">
+
+
+       <div class="row mb-5">
+           <h1>Assessments</h1>
+           <br/>
+           <div class="col-10">
+
+
+
+  <div class="accordion" id="accordionExample">
+  {% if hearts %}
+  <div class="card" style="border:none; border-radius:10px;">
+
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <div class=" table-hover my-3 p-3 bg-white rounded box-shadow" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         <p class="pb-2 mb-0">Heart Assessment</p>
+         <p><button type="button" name="button"><a href="#">open</a></button></p>
+       </div>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+      {% for heart in hearts %}
+      <hr>
+        <div class="accordion-body">
+          <div class="media text-muted pt-3">
+            <p class="media-body pb-3 mb-0 small lh-125">
+              <a href="{{ url_for('user', username=user.username) }}">
+                  <img src="{{ user.avatar(70) }}" />
+              </a>
+              <strong class="d-block text-gray-dark">@<a href="{{ url_for('user', username=user.username) }}">{{ user.username }}</a></strong>
+                <p class="media-body pb-3 mb-0 small lh-125">Date taken: {{ heart.timestamp }}</p>
+                <p class="media-body pb-3 mb-0 small lh-125">Heart Condition Assessment:</p>
+              {% if heart.prediction==1 %}
+              <p style="color:red">There seems to be signs of Heart Disease</p>
+              {% else %}
+              <p style="color:green">Your heart condition seems to be okay.</p>
+              {% endif %}
+               <p class="media-body pb-3 mb-0 small lh-125">Vitals</p>
+               <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Age</th>
+                      <th scope="col">Resting BP</th>
+                      <th scope="col">Max Heart Rate</th>
+                      <th scope="col">Level of Chest Pain</th>
+                      <th scope="col">Exercise Induced Angina</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">{{ heart.Age}}</th>
+                      <td>{{ heart.BloodPressure}}</td>
+                      <td>{{ heart.MaxHeartRate}}</td>
+                      <td>{{ heart.ChestPain}}</td>
+                      {% if heart.ExerciseInducedAngina ==1%}
+                      <td>Yes</td>
+                      {% else %}
+                      <td>No</td>
+                      {% endif %}
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </p>
+            <button type="button" name="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">collapse</button>
+
+          </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  {% if breast_cancer %}
+  <div class="card" style="border:none; border-radius:10px;">
+
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <div class=" table-hover my-3 p-3 bg-white rounded box-shadow" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+         <p class="pb-2 mb-0">Breast Cancer Assessment</p>
+         <p><button type="button" name="button"><a href="#">open</a></button></p>
+
+       </div>
+      </h2>
+    </div>
+
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+      {% for cancer in breast_cancer %}
+      <hr>
+        <div class="accordion-body">
+          <div class="media text-muted pt-3">
+            <p class="media-body pb-3 mb-0 small lh-125">
+              <a href="{{ url_for('user', username=user.username) }}">
+                  <img src="{{ user.avatar(70) }}" />
+              </a>
+              <strong class="d-block text-gray-dark">@<a href="{{ url_for('user', username=user.username) }}">{{ user.username }}</a></strong>
+                <p class="media-body pb-3 mb-0 small lh-125">Date taken: {{ cancer.timestamp }}</p>
+                <p class="media-body pb-3 mb-0 small lh-125">Cancer Assessment: </p>
+              {% if cancer.prediction==1 %}
+              <p style="color:red">You may have breast cancer</p>
+              {% else %}
+              <p style="color:green">Great it looks like you are not showing signs of breast cancer.</p>
+              {% endif %}
+               <!-- <p class="media-body pb-3 mb-0 small lh-125">Vitals</p> -->
+               <!-- <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">perimeter_mean</th>
+                      <th scope="col">smoothness_mean</th>
+                      <th scope="col">compactness_mean</th>
+                      <th scope="col">concavity_mean</th>
+                      <th scope="col">concave_points_mean</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">{{ cancer.perimeter_mean}}</th>
+                      <td>{{ cancer.smoothness_mean}}</td>
+                      <td>{{ cancer.compactness_mean}}</td>
+                      <td>{{ cancer.concavity_mean}}</td>
+                      <td>{{ cancer.concave_points_mean}}</td>
+                    </tr>
+                  </tbody>
+                </table> -->
+              </div>
+            </p>
+            <button type="button" name="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">collapse</button>
+          </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if pneumonia %}
+  <div class="card" style="border:none; border-radius:10px;">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <div class=" table-hover my-3 p-3 bg-white rounded box-shadow" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+         <p class="pb-2 mb-0">Pneumonia Assessment</p>
+         <p><button type="button" name="button"><a href="#">open</a></button></p>
+
+       </div>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        {% for p in pneumonia %}
+        <hr>
+          <div class="accordion-body">
+            <div class="media text-muted pt-3">
+              <p class="media-body pb-3 mb-0 small lh-125">
+                <a href="{{ url_for('user', username=user.username) }}">
+                    <img src="{{ user.avatar(70) }}" />
+                </a>
+                <strong class="d-block text-gray-dark">@<a href="{{ url_for('user', username=user.username) }}">{{ user.username }}</a></strong>
+                  <p class="media-body pb-3 mb-0 small lh-125">Date taken: {{ p.timestamp }}</p>
+                  <p class="media-body pb-3 mb-0 small lh-125">Pneumonia Assessment: </p>
+                {% if p.prediction=='1' %}
+                <p style="color:red">There seems to be signs of Pneumonia. </br>Please consult a medical professional for a diagnosis.</p>
+                {% else %}
+                <p style="color:green"> Great it looks like you are not showing signs of Pneumonia.</p>
+                {% endif %}
+                </p>
+                </div>
+
+              <button type="button" name="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">collapse</button>
+            </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+    {% endif %}
+    {% if liver %}
+    <div class="card" style="border:none; border-radius:10px;">
+      <div class="card-header" id="headingFour">
+        <h2 class="mb-0">
+          <div class=" table-hover my-3 p-3 bg-white rounded box-shadow" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+           <p class="pb-2 mb-0">Liver Assessment</p>
+           <p><button type="button" name="button"><a href="#">open</a></button></p>
+
+         </div>
+        </h2>
+      </div>
+      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+        <div class="card-body">
+          {% for l in liver %}
+          <hr>
+            <div class="accordion-body">
+              <div class="media text-muted pt-3">
+                <p class="media-body pb-3 mb-0 small lh-125">
+                  <a href="{{ url_for('user', username=user.username) }}">
+                      <img src="{{ user.avatar(70) }}" />
+                  </a>
+                  <strong class="d-block text-gray-dark">@<a href="{{ url_for('user', username=user.username) }}">{{ user.username }}</a></strong>
+                    <p class="media-body pb-3 mb-0 small lh-125">Date taken: {{ l.timestamp }}</p>
+                    <p class="media-body pb-3 mb-0 small lh-125">Pneumonia Assessment: </p>
+                  {% if l.prediction==1 %}
+                  <p style="color:red">You may have Liver Disease. </br>Please consult a medical professional for a diagnosis.</p>
+                  {% else %}
+                  <p style="color:green">Great it looks like you are not showing signs of any Liver Disease.</p>
+                  {% endif %}
+                  </p>
+                  </div>
+
+                <button type="button" name="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">collapse</button>
+              </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+      {% endif %}
+</div>
+
+         </div>
+       </div>
+   </div>
+
+
+{% endblock %}

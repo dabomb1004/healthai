@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+
+<div class="d-flex align-items-center justify-content-center mt-5 mb-5">
+
+  <div class="row mb-5" style="margin-left:10px">
+
+      <h1 class="mb-5">Symptom Library</h1>
+      <input type="text" id="search" placeholder="Type to search">
+      <div class="col-md-12">
+
+        {%if data%}
+        <div class="table-responsive">
+            <table id="table" class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Disease</th>
+                        <th>Description</th>
+                        <th>Actions to Take</th>
+                      </tr>
+                    </thead>
+                    {%for d in data %}
+                    <tbody>
+                      <tr>
+                        <th>{{ d['Disease'] }}</th>
+                        <td>{{ d['Description'] }}</td>
+                        <td><ul>
+                          {% if d['Precaution_1'] %}
+                              <li>{{ d['Precaution_1'] }}</li>
+                          {% endif %}
+                          {% if d['Precaution_2'] %}
+                              <li>{{ d['Precaution_2'] }}</li>
+                          {% endif %}
+                          {% if d['Precaution_3'] %}
+                              <li>{{ d['Precaution_3'] }}</li>
+                          {% endif %}
+                          {% if d['Precaution_4'] %}
+                              <li>{{ d['Precaution_4'] }}</li>
+                          {% endif %}
+                            </ul>
+
+                        </td>
+                      </tr>
+                    </tbody>
+                    {%endfor%}
+            </table>
+        </div>
+        {%endif%}
+
+    </div>
+  </div>
+
+
+</div>
+
+<script>
+  var $rows = $('#table tr');
+$('#search').keyup(function() {
+    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+
+    $rows.show().filter(function() {
+        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+        return !~text.indexOf(val);
+    }).hide();
+});
+
+</script>
+
+{% endblock %}
