@@ -1,6 +1,7 @@
 # healthai
 Health AI is my capstone project for the MSIST Program at GWU. It uses machine learning models such as CNN, Bagging Classifiers, &amp; SVM to predict the likelihood of having disease based on customer health input
 
+
 # Installation 
 
 To install the files and make them work in your local file you will need to do the following: 
@@ -19,9 +20,9 @@ If you don't have Python 3 installed please go to https://www.python.org/downloa
 7. Now that you are in your virtual environment install Python Flask: 
    pip install Flask 
   
-8. Now we need to install the packages. If you type in 'flask run' in the command line you will get an error saying a package is missing 
+8. Now All the packages are already installed inside of the venv folder in this github. However if you type in 'flask run' in the command line and get an error saying a package is missing or you would like to install these packages yourself Go on to Install Required Packages section below. If not, head on over to Run Website section. 
 
-# Install Packages 
+# Install Required Packages 
 
 Originally I pip freezed all the requirements into a requirements.txt file but some things were off so I created another txt file 
 
