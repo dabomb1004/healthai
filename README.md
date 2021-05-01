@@ -20,7 +20,7 @@ If you don't have Python 3 installed please go to https://www.python.org/downloa
 7. Now that you are in your virtual environment install Python Flask: 
    pip install Flask 
   
-8. Now All the packages are already installed inside of the venv folder in this github. However if you type in 'flask run' in the command line and get an error saying a package is missing or you would like to install these packages yourself Go on to Install Required Packages section below. If not, head on over to Run Website section. 
+8.Now you will need to install the required packages. Some packages have already been installed and placed in the venv folder. But go through the Install Required Packages to complete it. 
 
 # Install Required Packages 
 
