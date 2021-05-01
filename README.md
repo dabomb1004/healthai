@@ -13,7 +13,7 @@ If you don't have Python 3 installed please go to https://www.python.org/downloa
 2. Open command line in administrative mode (right click on command line icon and choose run as admin)
 3. go into the FlaskApp base directory: 
    cd C:\Users\test\Documents\FlaskApp   Note: this is my base directory path, you need to replace this with your's
-4. Create Environment 
+4. If venv is not already there in FlaskApp/FlaskApp, Create Environment 
    py -3 -m venv <name of environment>  Note: I do py -3 m venv venv (venv is the name of environ but you can call it what you want) 
 6. Activate the environment:
    venv\bin\activate (in this case venv is the name of my environ. Also this is for Windows for linux use . venv/bin/activate or use source in place of .)
