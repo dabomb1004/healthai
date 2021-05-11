@@ -1,5 +1,9 @@
 # healthai
-Health AI is my capstone project for the MSIST Program at GWU. It uses machine learning models such as CNN, Bagging Classifiers, &amp; SVM to predict the likelihood of having disease based on customer health input
+Health AI is my capstone project for the MSIST Program at GWU. It uses machine learning models such as CNN, Bagging Classifiers, &amp; SVM to predict the likelihood of having disease based on customer health input. You can see a basic demo here (does not include ml models only front facing site): http://107.23.25.147/
+
+To login use test credentials: 
+user: example
+password: Password2020!
 
 
 # Installation 
