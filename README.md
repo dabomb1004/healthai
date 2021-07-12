@@ -44,7 +44,7 @@ In the case, you run into an error, you may need to pip install the packages lis
 
 # Setting Up the Database
 
-1. If you would like to access more than just the status page and login into the main app you will need to set up a mysql database. For this projet a mariadb database version 8.0.20 was used. It would probably be wise to use version 8 or there may be compatibility issues.
+1. If you would like to access more than just the status page and login into the main app you will need to set up a mysql database. For this project a mariadb database version 8.0.20 was used. It would probably be wise to use version 8 or there may be compatibility issues.
 2. If you are creating an RDS instance from AWS then make sure to make publicly accessible which is found under the Additional Configuration tab in setup. 
 3. For the AWS RDS option, you need to go into the config file and edit the SQLALCHEMY_DATABASE_URI
 4. Replace the contents with your own personal RDS info:
